@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.game-board{
+    width: 100%;
+    height: 550px;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 15px solid rgb(29, 31, 29);
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(black, gray);
+}
+.nuvem{
+    position: absolute;
+    width: 550px;
+    animation: nuvem-animation 15s infinite linear;
+}
+.cacto{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: cacto-animation 1.5s infinite linear;
+}
+
+@keyframes cacto-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.mr-pompo{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 130px;
+    }
+
+    50%{
+        bottom: 130px;
+    }
+
+    60%{
+        bottom: 130px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes nuvem-animation{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.morcego{
+    position: absolute;
+    width: 120px;
+    bottom: 50%;
+    right: 0;
+    animation: morcego 2.8s infinite linear;
+}
+
+@keyframes morcego{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
